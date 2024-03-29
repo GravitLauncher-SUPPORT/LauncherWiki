@@ -18,15 +18,15 @@ export default defineUserConfig({
         ['meta', { name: 'theme-color', content: '#ffffff' }],
         ['meta', { property: 'og:title', content: 'GravitLauncher Wiki' }],
         ['meta', { property: 'og:type', content: 'website' }],
-        ['meta', { property: 'og:url', content: 'https://gravitlauncher.com/' }],
-        ['meta', { property: 'og:image', content: 'https://gravitlauncher.com/images/logo.png' }],
+        ['meta', { property: 'og:url', content: 'https://gravit-support.ru/' }],
+        ['meta', { property: 'og:image', content: 'https://gravit-support.ru/images/logo.png' }],
         ['meta', { property: 'og:image:width', content: '512' }],
         ['meta', { property: 'og:image:height', content: '512' }],
     ],
     lang: 'ru-RU',
-    title: 'GravitLauncher Wiki',
-    description: 'GravitLauncher Wiki',
-    port: '8080', //Порт на котором запускается VuePress
+    title: 'GravitLauncher',
+    description: 'Документация (Wiki)',
+    port: '8090', //Порт на котором запускается VuePress
     bundler: viteBundler({}),
     theme: defaultTheme({
         repo: 'GravitLauncher/Launcher',
@@ -68,7 +68,33 @@ export default defineUserConfig({
             },
             {
                 text: 'Зеркало',
-                link: 'https://mirror.gravitlauncher.com/',
+                children: [
+                  {
+                    text: 'Официальное',
+                    link: 'https://mirror.gravitlauncher.com/',
+                  },
+                  {
+                    text: 'microwin7',
+                    link: 'https://mirror.gravit-support.ru/',
+                  },
+                ],
+            },
+            {
+                text: 'DEMO',
+                children: [
+                  {
+                    text: 'SimpleCabinet',
+                    link: 'https://demo.gravit-support.ru/',
+                  },
+                  {
+                    text: 'Launcher.jar',
+                    link: 'https://demo.gravit-support.ru/updates/Launcher.jar',
+                  },
+                  {
+                    text: 'Launcher.exe',
+                    link: 'https://demo.gravit-support.ru/updates/Launcher.exe',
+                  },
+                ],
             },
             {
                 text: 'Discord',
