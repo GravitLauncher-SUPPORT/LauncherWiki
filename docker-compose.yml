@@ -1,0 +1,7 @@
+services:
+  wiki:
+    container_name: "wiki"
+    build: .
+    restart: always
+    ports:
+      - 8092:80
